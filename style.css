@@ -2,7 +2,7 @@
 
 
 body {
-    background-color: rgb(195, 171, 101);
+    background-color: rgb(69, 134, 106);
 }
 
 #headerLogo {
@@ -13,25 +13,30 @@ body {
 }
 
 #contactBox {
-    background-color: rgb(160, 136, 62);
+    background-color: rgb(43, 110, 81);
     border: 2px solid;
+    border-radius: 5%;
     max-width: 196px;
     width: 196px;
     max-height: 130px;
     height: 120px;
     position: absolute;
     left: 525px;
-    top: 220px;
+    top: 228px;
     display: none;
 }
 
-#contactText:hover + #contactBox {
+#contactHeader:hover + #contactBox {
     display: block;
 }
 
 
-#contactText {
-    border: 3px solid;
+#contactHeader {
+    border: 2px solid;
+    border-radius: 5%;
+    padding: 5px;
+    cursor: pointer;
+
 }
 
 
@@ -43,3 +48,5 @@ body {
     margin-top: 20px;
     user-select: none;
 }
+
+
