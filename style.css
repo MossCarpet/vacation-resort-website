@@ -12,7 +12,7 @@ body {
     left: 450px;
 }
 
-.contactBox {
+#contactBox {
     background-color: rgb(160, 136, 62);
     border: 2px solid;
     max-width: 196px;
@@ -24,6 +24,16 @@ body {
     top: 220px;
     display: none;
 }
+
+#contactText:hover + #contactBox {
+    display: block;
+}
+
+
+#contactText {
+    border: 3px solid;
+}
+
 
 #contactText {
     font-family: 'Ubuntu', 'Arial';
