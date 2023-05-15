@@ -2,18 +2,17 @@
 
 
 body {
-    background-color: rgb(69, 134, 106);
+    background-color: rgb(247, 212, 144);
 }
 
 #headerLogo {
     text-align: center;
     margin-top: -4%;
-    position: absolute;
-    left: 450px;
+    position: relative;
 }
 
 #contactBox {
-    background-color: rgb(43, 110, 81);
+    background-color: rgb(247, 212, 144);
     border: 2px solid;
     border-radius: 5%;
     max-width: 210px;
@@ -21,7 +20,7 @@ body {
     max-height: 130px;
     height: 120px;
     position: absolute;
-    left: 930px;
+    left: 920px;
     top: 128px;
     display: none;
 }
@@ -35,7 +34,7 @@ body {
     border: 2px solid;
     border-radius: 5%;
     padding: 5px;
-    cursor: pointer;
+    cursor: help;
 
 }
 
@@ -53,16 +52,19 @@ body {
 .linksBar {
     display: inline-block;
     position: absolute;
-    background-color: rgb(69, 134, 106);
+    background-color: rgb(252, 213, 134);
     border: 2px solid;
     max-width: 600px;
     width: 425px;
     height: 100px;
     top: 50%;
-    left: 3%;
+    left: 11%;
 }
 
+
+
 .linksBarLink {
+    position: relative;
     text-decoration: none;
     color: black;
     font-family: 'Ubuntu', 'Arial';
@@ -71,10 +73,67 @@ body {
     user-select: none;
 }
 
+.linksBarLink::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: #000;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+
+
 .linksBarLink:hover {
     color: rgb(59, 59, 59);
-    border: 2px;
-    border-style: none none solid none;
-    animation-name: linkHover ;
-    animation-timing-function: 800ms ease-in-out; 
+}
+
+.linksBarLink:hover::before {
+    transform: scaleX(1);
+}
+
+.specialPromotions {
+    display: inline-block;
+    position: absolute;
+    background-color: rgb(252, 213, 134);
+    border: 2px solid;
+    max-width: 600px;
+    width: 425px;
+    height: 100px;
+    top: 50%;
+    left: 53%;
+}
+a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Ubuntu';
+    user-select: none;
+    position: relative;
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: #000;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+
+a:hover {
+    color: rgb(59, 59, 59);
+}
+
+
+a:hover::before {
+    transform: scaleX(1);
 }
